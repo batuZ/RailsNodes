@@ -7,6 +7,13 @@ cmd> rails new ProjectName -d=mysql
 								postgresql
 								sqlite3	(默认)
 
+#   修改程序源
+# new 项目进入bundle install 时 Ctrl + C 停止安装
+# 修改项目目录中已经生成的配置文件 Gemfile
+# 把原来的 source 'https://rubygems.org'
+# 修改为   source 'https://ruby.taobao.org'
+# 再次运行 bundle install
+
 
 #	启动
 cmd> rails server
@@ -19,6 +26,7 @@ cmd> rails s
 	-u 启用debug模式
 	-e 指定运行环境 devlopment(默认)\test\production 
 !
+
 
 
 #	停止
