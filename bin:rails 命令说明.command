@@ -13,6 +13,6 @@ rails server(s)			--启动服务
 rails console(c)		--在命令行中与 Rails 应用交互 (IRB)
 rails runner(r)			--以非交互的方式运行 Ruby 代码
 rails destroy			--rails generate的逆操作
-
+rake routes				--查看所有路由
 这些命令都可指定 -h 或 --help 选项列出更多信息。
 

@@ -62,7 +62,8 @@ rails generate scaffold book [field1:type field2:type ...]
 
 
 # => 创建一个控制器
-	rails generate(g) controller Welcome index
+	rails generate(g) controller Welcome index happy ...
+	(逆向操作 rails g destroy welcome index happy ...)
 # => 生成的主要内容：
 		# => app/controllers/welcome_controller.rb
 		# => app/views/welcome/index.html.erb
@@ -73,7 +74,7 @@ rails generate scaffold book [field1:type field2:type ...]
 		# => app/models/book.rb
 		# => db/migrate/20140120191729_create_book.rb 
 
-
+！！！ 创建 scoffold model 用单数首字母大写，controller 用复数，小写  ！！！
 
 
 
