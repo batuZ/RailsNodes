@@ -35,6 +35,6 @@ cmd> rails new ProjectName -d=mysql
 # => 7、创建 Article 模型
 	# => 7.1 cmd > rails generate(g) model Article title:string text:text 对应数据库中的表
 
-# => 8､迁移
+# => 8､迁移 rails db:migrate
 
 
