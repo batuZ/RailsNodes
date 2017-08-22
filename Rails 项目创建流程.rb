@@ -2,7 +2,7 @@
 # => 参考网站 https://ruby-china.github.io/rails-guides/ (中文)
 
 # => 1、创建项目
-cmd> rails new ProjectName -d=mysql
+cmd> rails new ProjectName -d=mysql --skip-bundle
 	# => 1.1 Ctrl C 暂停环境配置
 	# => 1.2 更改源 source 'https://rubygems.org' => source 'https://ruby.taobao.org'
 	# => 1.3 cd ProjectName 进入项目目录后运行 bundle install 完成配置

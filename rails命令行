@@ -16,3 +16,31 @@ rails destroy			--rails generate的逆操作
 rake routes				--查看所有路由
 这些命令都可指定 -h 或 --help 选项列出更多信息。
 
+
+增加更改源
+gem sources --remove https://rubygems.org/
+gem sources -a https://ruby.taobao.org/
+
+查看全部路由
+rake routes
+
+通过迁移文件向已有books模型中增加user_id字段(视频15)
+rails g migration add_user_id_to_books user_id:id
+rake db:migrate
+
+迁移
+bundle exec rake db:migrate
+rake db:migrate
+
+在项目目录下使用控制台操作模型数据
+rails control
+ex: 
+auser = User.new(userName => 'batu', email => 'batu@gvitech.com') 	#返回user对象,对象保留在内存中
+auser.save 	#返回true
+
+
+
+
+
+
+

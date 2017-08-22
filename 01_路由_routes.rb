@@ -17,7 +17,6 @@ Rails.application.routes.draw do
 		member do
 			get 'newLY04','newLY05'
 		end
-
 	end
 
 
