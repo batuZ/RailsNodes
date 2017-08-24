@@ -3,7 +3,7 @@ bin/rails 命令说明.command
 参考网址：https://ruby-china.github.io/rails-guides/command_line.html
 
 
-有些命令在 Rails 开发过程中经常会用到，下面按照使用频率列出：
+------> 有些命令在 Rails 开发过程中经常会用到，下面按照使用频率列出：
 
 rails new app_name		--新建项目
 rails dbconsole(db)		--与数据库交互
@@ -16,30 +16,69 @@ rails destroy			--rails generate的逆操作
 rake routes				--查看所有路由
 这些命令都可指定 -h 或 --help 选项列出更多信息。
 
+------> 创建项目
+cmd> rails new ProjectName -d=mysql 
+								oracle 
+								postgresql
+								sqlite3	(默认)
 
-增加更改源
-gem sources --remove https://rubygems.org/
-gem sources -a https://ruby.taobao.org/
+------> 修改程序源
+new 项目进入bundle install 时 Ctrl + C 停止安装
+修改项目目录中已经生成的配置文件 Gemfile
+把原来的 source 'https://rubygems.org'
+修改为   source 'https://ruby.taobao.org'
+再次运行 bundle install
 
-查看全部路由
+------> 启动
+cmd> rails server
+cmd> rails s
+: << !
+	-p 指定服务端口
+	-b 指定服务IP
+	-c 使用自定义rackup
+	-d 使用服务器运行时作为系统守护进程
+	-u 启用debug模式
+	-e 指定运行环境 devlopment(默认)\test\production 
+!
+
+
+------> 查看全部路由
 rake routes
 
-通过迁移文件向已有books模型中增加user_id字段(视频15)
-rails g migration add_user_id_to_books user_id:id
-rake db:migrate
 
-迁移
-bundle exec rake db:migrate
-rake db:migrate
-
-在项目目录下使用控制台操作模型数据
+------> 在项目目录下使用控制台操作模型数据
 rails control
 ex: 
 auser = User.new(userName => 'batu', email => 'batu@gvitech.com') 	#返回user对象,对象保留在内存中
 auser.save 	#返回true
 
+------> 设置mac环境变量
+
+vim bash
+export PATH=$PATH:/usr/local/mysql-5.7.18-macos10.12-x86_64/bin/
 
 
+
+------> 手动连接数据库
+cmd> /usr/local/mysql-5.7.18-macos10.12-x86_64/bin/mysql -uroot -proot
+
+
+------> 创建一个控制器
+	rails generate(g) controller Welcome index happy ...
+	(逆向操作 rails g destroy welcome index happy ...)
+
+
+！！！ 创建 scoffold model 用单数首字母大写，controller 用复数，小写  ！！！
+
+
+------> 迁移
+bundle exec rake db:migrate
+rake db:migrate
+
+
+------> 通过迁移文件向已有books模型中增加user_id字段(视频15)
+rails g migration add_user_id_to_books user_id:id
+rake db:migrate
 
 
 

@@ -23,13 +23,17 @@ class UserController < ApplicationController
 	end
 
 	def show
+		if logged_in?
 		# id 就是 url中的数字
 		@user = User.find(params[:id])
+		else
+			render root_url
+		end
 	end
 
 	#健壮参数,约束哪些参数允许传入
 	def users_params
-		params.requier(:user).permit(:userName, :email, :password ,:password_confime)
+		params.requier(:user).permit(:userName, :email, :password ,:password_)
 	end
 
 
