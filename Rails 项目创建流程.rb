@@ -38,7 +38,8 @@
 
 # => 1、创建项目
 	# => cmd> rails new AM_Server -d=mysql --skip-bundle
-	rails new AM_Server
+	rails new AM_Server -d=mysql
+	rails db:create
 
 # => 2、配置项目
 	# => 2.1 配置数据库环境  ../config/database.yml
@@ -80,8 +81,11 @@
 	#rails destroy scaffold User 
 	rails db:migrate
 
-# => 8､迁移 rails db:migrate
+# => 8､迁移 
+	rails db:migrate
 
 # => 9､修改属性字段
 	rails g migration add_user_id_to_books user_id:id
 	rails db:migrate
+
+# => 10､创建关系

@@ -21,6 +21,7 @@ cmd> rails new ProjectName -d=mysql
 								oracle 
 								postgresql
 								sqlite3	(默认)
+cmd> rails db:create 创建数据库
 
 ------> 修改程序源
 new 项目进入bundle install 时 Ctrl + C 停止安装
@@ -46,18 +47,12 @@ cmd> rails s
 rake routes
 
 
-------> 在项目目录下使用控制台操作模型数据
-rails control
-ex: 
-auser = User.new(userName => 'batu', email => 'batu@gvitech.com') 	#返回user对象,对象保留在内存中
-auser.save 	#返回true
+
 
 ------> 设置mac环境变量
-
-vim bash
-export PATH=$PATH:/usr/local/mysql-5.7.18-macos10.12-x86_64/bin/
-
-
+sudo vi ~/.bash_profile
+export PATH="/usr/local/mysql-5.7.18-macos10.12-x86_64/bin:$PATH"
+:w 回车
 
 ------> 手动连接数据库
 cmd> /usr/local/mysql-5.7.18-macos10.12-x86_64/bin/mysql -uroot -proot
@@ -78,8 +73,22 @@ rake db:migrate
 
 ------> 通过迁移文件向已有books模型中增加user_id字段(视频15)
 rails g migration add_user_id_to_books user_id:id
+
+rake db:drop
+rake db:create
 rake db:migrate
 
 
+------> 在项目目录下使用控制台操作模型数据
+rails control
+ex: 
+auser = User.new(userName => 'batu', email => 'batu@gvitech.com') 	#返回user对象,对象保留在内存中
+auser.save 	#返回true
+auser.destroy 
+User.destroy 'id'
+
+------> 通过 rake seed 初始化数据
+	在 /db/seeds.rb中编写ruby
+	在cmd 中 rake seed 执行
 
 
