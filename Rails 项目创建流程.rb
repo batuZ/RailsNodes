@@ -40,7 +40,7 @@
 	# => cmd> rails new AM_Server -d=mysql --skip-bundle
 	rails new AM_Server -d=mysql
 	rails db:create
-
+ 	gem 'bcrypt', '~> 3.1.7' #开启验证密码
 # => 2、配置项目
 	# => 2.1 配置数据库环境  ../config/database.yml
 	# => 设置密码为 root
@@ -60,9 +60,11 @@
 	root 'welcome#index'
 
 # => 6､脚手架
-	rails generate scaffold Project pro_name:string pro_user:string pro_photogroup:string
-	rails generate scaffold Photo photo_name:string
-	rails g scaffold User u_name:string u_email:string u_level:int
+rails g scaffold User name:string email:string
+rails g scaffold Project name:string user_id:integer
+rails g scaffold Group name:string project_id:integer
+rails g scaffold Photo name:string	group_id:integer
+
 # => 6、创建资源 
 	# => 6.1 资源是各种实例的类型，定义了创建、读取、更新、删除的动作
 	# => 6.2 在 ../config/routse.rb  在方法中增加一句 resources :articles（类名）

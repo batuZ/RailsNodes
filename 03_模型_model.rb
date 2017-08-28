@@ -29,7 +29,7 @@ class Book < ActiceRecord::Baes
 	@book.errors.full_messages
 
 	#添加密码
-	has_secuer_password
+	has_secure_password
 	validates :password, length: {minmum: 6} 		#验证一个不小于6位数的密码
 
 

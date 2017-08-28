@@ -92,3 +92,6 @@ User.destroy 'id'
 	在cmd 中 rake seed 执行
 
 
+------> 调试方法
+	console.log('')
+	alert('')
