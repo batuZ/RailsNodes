@@ -1,6 +1,17 @@
 # AM 项目创建流程.rb
 # => 参考网站 https://ruby-china.github.io/rails-guides/ (中文)
 
+rails new automesh -d=mysql
+rake db:create
+rails g scaffold User name:string password:string
+rails g scaffold Project name:string user_id:string
+rails g scaffold Group name:string project_id:string
+rails g scaffold Photo name:string group_id
+#rails destroy scaffold ... 
+rails db:migrate
+
+
+
 结构：
 
 主页{
