@@ -1,6 +1,7 @@
 # AM 项目创建流程.rb
 # => 参考网站 https://ruby-china.github.io/rails-guides/ (中文)
-
+# => 使用C++来编写Ruby程序扩展的教程 http://www.jb51.net/article/64144.htm
+# => 在C#中调用Ruby代码 http://blog.csdn.net/begtostudy/article/details/4476937
 rails new automesh -d=mysql
 rake db:create
 rails g scaffold User name:string password:string
