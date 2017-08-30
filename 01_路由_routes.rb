@@ -1,9 +1,10 @@
 # 01_路由_routes.rb
 
-在页面查看路由 http://localhost:3000/rails/info/routes
+非常不错的路由教程：	https://rails-practice.com/content/Chapter_2/2.3.html
+
 在控制台查看路由 rails routes
 
-     rails g scaffold comment post:references doc:text  
+ 
 
 Rails.application.routes.draw do 
 	resources :books, :except => show 	# 资源路由，从7个默认路由中排除show动作
@@ -32,3 +33,13 @@ Rails.application.routes.draw do
 	root 'application#hello'
 	
 end
+
+
+----->嵌套路由(默认为string,ex:rails g scaffold books type_id:integer price:decimal name)
+rake db:drop
+rake db:create
+rails g scaffold User name password
+rails g scaffold Project name user_id:integer
+rails g scaffold Group name project_id:integer
+rails g scaffold Photo name group_id:integer
+rake db:migrate
