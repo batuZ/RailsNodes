@@ -3,6 +3,8 @@ bin/rails 命令说明.command
 参考网址：			https://ruby-china.github.io/rails-guides/command_line.html
 Rails命令大全：		http://www.cnblogs.com/wang123/archive/2009/09/16/1567774.html
 Web 安全和 Rails： 	https://ruby-china.org/topics/31114
+非常不错的路由教程：	https://www.gitbook.com/download/pdf/book/liwei78/rails-practice
+非常不错的路由教程：	https://rails-practice.com/content/Chapter_2/2.3.html
 ------> 有些命令在 Rails 开发过程中经常会用到，下面按照使用频率列出：
 
 rails new app_name		--新建项目
@@ -95,3 +97,9 @@ User.destroy 'id'
 ------> 调试方法
 	console.log('')
 	alert('')
+
+------> db:
+rake db:create   # 创建数据库
+rake db:migrate  # 更新数据库，更新的文件来自 db/migrate/
+rake db:seed     # 执行 seed.rb 文件的内容，通常是创建一个默认的数据。
+rake db:drop     # 删除数据库

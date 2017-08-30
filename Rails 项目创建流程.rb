@@ -4,12 +4,20 @@
 rails new automesh -d=mysql
 rake db:create
 rails g scaffold User name:string password:string
-rails g scaffold Project name:string user_id:string
-rails g scaffold Group name:string project_id:string
-rails g scaffold Photo name:string group_id
-#rails destroy scaffold ... 
+rails g scaffold Project name:string user_id:integer
+rails g scaffold Group name:string project_id:integer
+rails g scaffold Photo name:string group_id:integer
+rails g controller sessions new create destroy
+
+rake
 rails db:migrate
 
+rails g scaffold variant product_id:integer price:decimal size
+rails d scaffold User
+rails d scaffold Project
+rails d scaffold Group
+rails d scaffold Photo
+rails d controller sessions
 
 
 结构：
@@ -45,6 +53,7 @@ rails db:migrate
 }
 
 
+#decimal 小数
 
 
 # => 1、创建项目
