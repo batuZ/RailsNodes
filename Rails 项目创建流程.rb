@@ -84,7 +84,7 @@ rails d controller sessions
 rails g scaffold User name:string email:string
 rails g scaffold Project name:string user_id:integer user:belongs_to groups:has_many
 rails g scaffold Group name:string project_id:integer
-rails g scaffold Photo name:string	group_id:integer
+rails g scaffold Photo name:string	group_id:integer avatar
 
 # => 6、创建资源 
 	# => 6.1 资源是各种实例的类型，定义了创建、读取、更新、删除的动作
@@ -111,4 +111,27 @@ rails g scaffold Photo name:string	group_id:integer
 	rails g migration add_user_id_to_books user_id:id
 	rails db:migrate
 
-# => 10､创建关系
+# => 10､上传
+		gem 'carrierwave', '~> 1.0'
+     	rails generate uploader Avatar
+     	"uploads/#{tagPath}"
+	  	mount_uploader :avatar, AvatarUploader
+        rails g migration add_avatar_to_photos tagPath avatar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
