@@ -17,3 +17,16 @@ end
 
 
 $ bin/rails generate migration AddPartNumberToProducts part_number:string
+
+class CreateBlogs < ActiveRecord::Migration[5.0]
+  def change
+    create_table :blogs do |t|
+      t.string :title
+      t.text   :content
+      t.boolean :is_public, default: true
+      # t.belongs_to :user
+
+      t.timestamps
+    end
+  end
+end
