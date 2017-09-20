@@ -1,0 +1,24 @@
+04_视图_views.erb
+
+
+### 前端角本 js
+http://selfcontroller.iteye.com/blog/1786610
+
+	自定义的脚本写在下面位置对应controller的coffee中
+	要在coffee 最开始处写 $ -> ，不然无法触发
+	app/assets/javascript/..
+	application.js为脚本基础配置文件：
+		//= require rails-ujs
+		//= require turbolinks
+		//= require_tree .		//把上面所有的js文件都加载到工程中
+
+	外部js库
+		把库文件放到lib/assets中
+		并在application.js为脚本基础配置文件中添加引用：
+		//= require ***
+		就可以使用外部库了 
+
+
+### 前端样式
+
+	app/assets/stylesheets/
