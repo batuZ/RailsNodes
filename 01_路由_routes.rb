@@ -4,8 +4,8 @@
 
 在控制台查看路由 rails routes
 在页面查看路由 http://localhost:3000/rails/info/routes
- 
-
+用户验证gem https://github.com/plataformatec/devise
+			https://rails-practice.com/content/Chapter_6/6.6.html
 Rails.application.routes.draw do 
 
 	# 资源路由，从7个默认路由中排除show动作
