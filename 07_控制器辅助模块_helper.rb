@@ -24,6 +24,7 @@ module SessionHelper
 	def getUser
 		# 当前实例变量是否为空，不为空直接返回，为空则去数据库找
 		@thisUser = @thisUser || User.find_by(session[:user])
+		@thisUser ||= User.find_by(session[:user])
 	end
 
 	#判断当前是否登录

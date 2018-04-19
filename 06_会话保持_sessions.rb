@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
 		if(@user && # @user 是否为空
 			@user.thuthenticate(params[:sessions][:password]))# 密码是否匹配
 
-			# 会话保持的关键，sessions[:user_id]是个唯一的全局变量？这里有内空说明已经在登录状态
+			# 会话保持的关键，sessions[:user_id]是个唯一的全局变量？这里有内容说明已经在登录状态
 			# 可以在注册用户后直接进入登录状态
 			sessions[:user_id] = @user.id 
 

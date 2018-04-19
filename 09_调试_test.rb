@@ -53,7 +53,7 @@
 
 	2.3 发送消息
 	把消息写入日志文件可以在控制器、模型或邮件程序中调用 logger.(debug|info|warn|error|fatal) 方法。
-		logger.debug "Person attributes hash: #{@person.attributes.inspect}"
+		logger.debug {"Person attributes hash: #{@person.attributes.inspect}"}
 		logger.info "Processing the request..."
 		logger.fatal "Terminating application, raised unrecoverable error!!!"
 	ex:
@@ -94,7 +94,7 @@
 
 	var 		显示变量及其值
 		all 		全部变量
-		args		参数？
+		args		参数
 		const 		常量
 		global		全局变量
 		instance	实例变量
