@@ -3,6 +3,7 @@
 # => 使用C++来编写Ruby程序扩展的教程 http://www.jb51.net/article/64144.htm
 # => 在C#中调用Ruby代码 http://blog.csdn.net/begtostudy/article/details/4476937
 rails new automesh -d=mysql
+ # https://gems.ruby-china.org
 rake db:create
 rails g scaffold User name password_digest
 rails g scaffold Project name user_id:integer
@@ -74,7 +75,7 @@ rails d controller sessions
 
 # => 4、创建contorller 
 	# => 4.1 cmd> rails generate(g) controller Welcome(am主页) index
-	rails gcontroller Welcome index
+	rails g controller Welcome index
 
 # => 5、设置应用主页路由
 	# => 5.1 修改 ../config/routse.rb  在方法中增加一句 root 'welcome#index'
