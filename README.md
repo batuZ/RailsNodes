@@ -1,7 +1,7 @@
 # Scaffold 管理资源套件的函数
 
 #### 准备工作
-```ruby
+```c#
 
 rails new Project --skip-bundle
 source 'https://gems.ruby-china.org'
@@ -11,20 +11,20 @@ cd Project
 ```
 
 #### 创建、删除
-```ruby
+```c#
 // 互反操作
 rails g scaffold ABC
 rails d scaffold ABC
 ```
 
 #### 带参创建
-```ruby
+```c#
 // 创建名为ABC的资源，其中包括name(string时可以不标注类型)，number,size属性
 rails g scaffold ABC name number:integer size:float
 ```
 
 #### 迁移到数据库
-```ruby
+```c#
 // 如果没有创建数据库
 rake db:create
 
