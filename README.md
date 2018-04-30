@@ -27,9 +27,9 @@ rake db:create
 ps:创建过程和`Modled`非常相似，名称都是单数形式`User`，只是得到的结果不同
 
 #### 创建的内容
-  1、向数据库迁移的配置文件：[db/migrate/20180430105653_create_abcs.rb]()
-  2、资源模型：app/models/abc.rb
-  3、向路由中增加资源路由：resources :abcs
-  4、资源控制器：app/controllers/ab_cs_controller.rb
-  5、资源视图套装：app/views/ab_cs/*.*
-  6、tests\helper\assets.coffee\assets.scss...
+    1、向数据库迁移的配置文件：[db/migrate/20180430105653_create_abcs.rb]()
+    2、资源模型：app/models/abc.rb
+    3、向路由中增加资源路由：resources :abcs
+    4、资源控制器：app/controllers/ab_cs_controller.rb
+    5、资源视图套装：app/views/ab_cs/*.*
+    6、tests\helper\assets.coffee\assets.scss...
