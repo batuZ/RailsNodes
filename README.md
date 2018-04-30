@@ -16,13 +16,13 @@ cd Project
 rails g scaffold ABC
 rails d scaffold ABC
 
-# 带参创建,创建名为ABC的资源，其中包括name(string时可以不标注类型)，number,size属性
+# 带参创建,创建名为ABC的资源，其中包括`name`(string时可以不标注类型)，`number`,`size`属性
 rails g scaffold ABC name number:integer size:float
 
 ```
-		ps:创建过程和Modled非常相似，名称都是单数形式(User)，只是得到的结果不同
+ps:创建过程和`Modled`非常相似，名称都是单数形式`User`，只是得到的结果不同
 
 #### 创建的内容
-		1､
-		2､
-		3､
+1､
+2､
+3､
