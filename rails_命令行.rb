@@ -8,6 +8,10 @@ Web 安全和 Rails： 	https://ruby-china.org/topics/31114
 ------> 有些命令在 Rails 开发过程中经常会用到，下面按照使用频率列出：
 
 rails new app_name		--新建项目
+rails new forScaffold --skip-bundle
+source 'https://gems.ruby-china.org'
+
+
 rails dbconsole(db)		--与数据库交互
 rails generate(g)		--创建模版
 bin/rails 				--5.x新增了rake功能，代替rails,区别不大
@@ -47,8 +51,6 @@ cmd> rails s
 
 ------> 查看全部路由
 rake routes
-
-
 
 
 ------> 设置mac环境变量
