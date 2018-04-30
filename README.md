@@ -1,24 +1,12 @@
-# README
+# Scaffold 创建或删除资源套件的函数
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rails new Project --skip-bundle
+source 'https://gems.ruby-china.org'
+bundle
+cd Project
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 创建
+```ruby
+	rails g scaffold ABC
+```
