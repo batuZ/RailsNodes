@@ -23,6 +23,6 @@ rails g scaffold ABC name number:integer size:float
 ps:创建过程和`Modled`非常相似，名称都是单数形式`User`，只是得到的结果不同
 
 #### 创建的内容
-	1､向数据库迁移的配置文件：[xxx.rb](https://github.com/batuZ/RubyOnRails_Notes/blob/master/Rails_gem.rb)
-	2､
-	3､
+1､向数据库迁移的配置文件：[xxx.rb](https://github.com/batuZ/RubyOnRails_Notes/blob/master/Rails_gem.rb)
+2､
+3､
