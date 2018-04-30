@@ -1,7 +1,7 @@
 # Scaffold 管理资源套件的函数
 
 #### 准备工作
-```C#
+```
 
 rails new Project --skip-bundle
 source 'https://gems.ruby-china.org'
