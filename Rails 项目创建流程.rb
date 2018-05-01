@@ -3,7 +3,7 @@
 # => 使用C++来编写Ruby程序扩展的教程 http://www.jb51.net/article/64144.htm
 # => 在C#中调用Ruby代码 http://blog.csdn.net/begtostudy/article/details/4476937
 rails new automesh -d=mysql
- # https://gems.ruby-china.org
+source 'https://gems.ruby-china.org'
 rake db:create
 rails g scaffold User name password_digest
 rails g scaffold Project name user_id:integer
