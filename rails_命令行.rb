@@ -7,9 +7,7 @@ Web 安全和 Rails： 	https://ruby-china.org/topics/31114
 非常不错的路由教程：	https://rails-practice.com/content/Chapter_2/2.3.html
 ------> 有些命令在 Rails 开发过程中经常会用到，下面按照使用频率列出：
 
-rails new app_name		--新建项目
-rails new forScaffold --skip-bundle
-source 'https://gems.ruby-china.org'
+
 
 
 rails dbconsole(db)		--与数据库交互
@@ -22,11 +20,7 @@ rails destroy			--rails generate的逆操作
 rake routes				--查看所有路由
 这些命令都可指定 -h 或 --help 选项列出更多信息。
 
-------> 创建项目
-cmd> rails new ProjectName -d=mysql 
-								oracle 
-								postgresql
-								sqlite3	(默认)
+
 cmd> rails db:create 创建数据库
 
 ------> 修改程序源
@@ -62,13 +56,6 @@ export PATH="/usr/local/mysql-5.7.18-macos10.12-x86_64/bin:$PATH"
 cmd> /usr/local/mysql-5.7.18-macos10.12-x86_64/bin/mysql -uroot -proot
 
 
-------> 创建一个控制器
-	rails generate(g) controller Welcome index happy ...
-	(逆向操作 rails g destroy welcome index happy ...)
-
-
-！！！ 创建 scoffold model 用单数首字母大写，controller 用复数，小写  ！！！
-
 
 ------> 迁移
 bundle exec rake db:migrate
@@ -99,9 +86,3 @@ User.destroy 'id'
 ------> 调试方法
 	console.log('')
 	alert('')
-
-------> db:
-rake db:create   # 创建数据库
-rake db:migrate  # 更新数据库，更新的文件来自 db/migrate/
-rake db:seed     # 执行 seed.rb 文件的内容，通常是创建一个默认的数据。
-rake db:drop     # 删除数据库
